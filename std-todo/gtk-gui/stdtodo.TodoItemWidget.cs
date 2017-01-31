@@ -6,7 +6,7 @@ namespace stdtodo
 	{
 		private global::Gtk.HBox hbox1;
 		
-		private global::Gtk.CheckButton checkbutton3;
+		private global::Gtk.CheckButton checkbutton;
 		
 		private global::Gtk.Label label1;
 
@@ -21,15 +21,15 @@ namespace stdtodo
 			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.checkbutton3 = new global::Gtk.CheckButton ();
-			this.checkbutton3.CanFocus = true;
-			this.checkbutton3.Name = "checkbutton3";
-			this.checkbutton3.Label = "";
-			this.checkbutton3.Active = true;
-			this.checkbutton3.DrawIndicator = true;
-			this.checkbutton3.UseUnderline = true;
-			this.hbox1.Add (this.checkbutton3);
-			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.checkbutton3]));
+			this.checkbutton = new global::Gtk.CheckButton ();
+			this.checkbutton.CanFocus = true;
+			this.checkbutton.Name = "checkbutton";
+			this.checkbutton.Label = "";
+			this.checkbutton.Active = true;
+			this.checkbutton.DrawIndicator = true;
+			this.checkbutton.UseUnderline = true;
+			this.hbox1.Add (this.checkbutton);
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.checkbutton]));
 			w1.Position = 0;
 			w1.Expand = false;
 			w1.Padding = ((uint)(3));
@@ -37,6 +37,7 @@ namespace stdtodo
 			this.label1 = new global::Gtk.Label ();
 			this.label1.Name = "label1";
 			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("label1");
+			this.label1.UseMarkup = true;
 			this.hbox1.Add (this.label1);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label1]));
 			w2.Position = 1;

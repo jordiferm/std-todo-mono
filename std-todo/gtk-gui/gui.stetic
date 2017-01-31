@@ -37,7 +37,7 @@
         <property name="MemberName" />
         <property name="Spacing">6</property>
         <child>
-          <widget class="Gtk.CheckButton" id="checkbutton3">
+          <widget class="Gtk.CheckButton" id="checkbutton">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes" />
@@ -57,6 +57,7 @@
           <widget class="Gtk.Label" id="label1">
             <property name="MemberName" />
             <property name="LabelProp" translatable="yes">label1</property>
+            <property name="UseMarkup">True</property>
           </widget>
           <packing>
             <property name="Position">1</property>
