@@ -57,6 +57,9 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="libstetic">
+      <HintPath>..\..\..\..\..\..\usr\lib\monodevelop\AddIns\MonoDevelop.GtkCore\libstetic.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -71,6 +74,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoItemWidget.cs" />
     <Compile Include="gtk-gui\stdtodo.TodoItemWidget.cs" />
+    <Compile Include="service\TodoItemsService.cs" />
+    <Compile Include="domain\TodoItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="service\" />
+    <Folder Include="domain\" />
+  </ItemGroup>
 </Project>
