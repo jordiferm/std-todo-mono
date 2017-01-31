@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="std-todo/std-todo.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="std-todo/MainWindow.cs">
+    <Files>
+      <File FileName="std-todo/Program.cs" Line="13" Column="23" />
+      <File FileName="std-todo/MainWindow.cs" Line="8" Column="12" />
+      <File FileName="std-todo/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
