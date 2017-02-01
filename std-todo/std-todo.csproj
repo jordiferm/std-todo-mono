@@ -76,6 +76,8 @@
     <Compile Include="gtk-gui\stdtodo.TodoItemWidget.cs" />
     <Compile Include="service\TodoItemsService.cs" />
     <Compile Include="domain\TodoItem.cs" />
+    <Compile Include="NewItemDialog.cs" />
+    <Compile Include="gtk-gui\stdtodo.NewItemDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

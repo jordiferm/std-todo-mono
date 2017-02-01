@@ -20,6 +20,10 @@ namespace stdtodo
 			//TODO: Get from RESTFUL; 
 			return todoItemList; 
 		}
+
+		public void addItem(TodoItem item) {
+			todoItemList.Add (item); 
+		}
 	}
 }
 
