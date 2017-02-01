@@ -9,6 +9,8 @@ namespace stdtodo
 		private global::Gtk.CheckButton checkbutton;
 		
 		private global::Gtk.Label label1;
+		
+		private global::Gtk.Button deleteButton;
 
 		protected virtual void Build ()
 		{
@@ -42,6 +44,18 @@ namespace stdtodo
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label1]));
 			w2.Position = 1;
 			w2.Padding = ((uint)(3));
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.deleteButton = new global::Gtk.Button ();
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.UseStock = true;
+			this.deleteButton.UseUnderline = true;
+			this.deleteButton.FocusOnClick = false;
+			this.deleteButton.Label = "gtk-delete";
+			this.hbox1.Add (this.deleteButton);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.deleteButton]));
+			w3.Position = 2;
+			w3.Expand = false;
+			w3.Fill = false;
 			this.Add (this.hbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();

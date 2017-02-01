@@ -21,18 +21,32 @@ public partial class MainWindow: Gtk.Window
 		}
 	}
 
-	private TodoItemWidget newItemWidget(TodoItem item) {
-		TodoItemWidget listItemWidget = new TodoItemWidget (item.Name); 
-		listItemWidget.IsComplete = item.IsComplete; 
-		return listItemWidget; 
-	}
-
 	private void addActions() {
 		Button newItemButton = new Button (); 
 		newItemButton.Clicked +=  OnNewItem ;
 		newItemButton.Label = "Add New Item"; 
 		vbox1.PackEnd (newItemButton, false, false, 10); 
 	}	
+
+	private TodoItemWidget newItemWidget(TodoItem item) {
+		TodoItemWidget listItemWidget = new TodoItemWidget (item); 
+		listItemWidget.IsComplete = item.IsComplete; 
+		listItemWidget.DeleteClicked += ItemAboutToDelete;
+		return listItemWidget; 
+	}
+
+	private void ItemAboutToDelete(object widget, TodoItem item) {
+		deleteTodoItem((Widget)widget, item); 
+		justDeletedMessage (item);
+	}
+
+	private void justDeletedMessage(TodoItem item) {
+		MessageDialog md = new MessageDialog(this, 
+			DialogFlags.DestroyWithParent, MessageType.Info, 
+			ButtonsType.Close, "ToDo item " + item.Name + " has been deleted correctly");
+		md.Run();
+		md.Destroy();		
+	}
 
 	private void OnNewItem(object sender, EventArgs e) {
 
@@ -50,6 +64,12 @@ public partial class MainWindow: Gtk.Window
 		vbox1.Add (newItemWidget(item)); 
 		itemsService.addItem(item);
 		vbox1.ShowAll(); 
+	}
+
+	private void deleteTodoItem(Widget widget, TodoItem item) {
+		vbox1.Remove (widget); 
+		itemsService.removeItem (item);
+		vbox1.ShowAll (); 
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

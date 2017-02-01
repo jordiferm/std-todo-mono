@@ -24,6 +24,10 @@ namespace stdtodo
 		public void addItem(TodoItem item) {
 			todoItemList.Add (item); 
 		}
+
+		public void removeItem(TodoItem item) {
+			todoItemList.Remove (item); 
+		}
 	}
 }
 
