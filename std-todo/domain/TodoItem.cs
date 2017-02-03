@@ -4,6 +4,7 @@ namespace stdtodo
 {
 	public class TodoItem
 	{
+		String key; 
 		String name; 
 		Boolean isComplete; 
 
@@ -25,6 +26,12 @@ namespace stdtodo
 		public Boolean IsComplete {
 			get { return isComplete; }
 			set { isComplete = value; }
+		}
+
+		public String Key {
+			get { return key; }
+			set { key = value; }
+
 		}
 
 	}
